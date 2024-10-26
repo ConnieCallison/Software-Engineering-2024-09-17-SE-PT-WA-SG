@@ -1,4 +1,4 @@
-const str = "\thello world";
+const str = "hello world";
 
 console.log(str);
 

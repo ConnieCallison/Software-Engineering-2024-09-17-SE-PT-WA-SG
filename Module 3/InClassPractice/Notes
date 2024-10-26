@@ -1,0 +1,8 @@
+Notes on Time Complexity
+
+0(n) represents a linear time
+
+time complexity can be constant (instant), linear, or exponential
+
+the easiest way to understand which time complexity is appropriate is to think about the time it would take to physcially complete the task (like imagine a librarian sorting through books to find the oldest book for example as linear time)
+
