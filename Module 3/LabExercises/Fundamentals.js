@@ -1,4 +1,4 @@
-// What are the results of these expressions? (answer first, then use console.log() to check)
+// 1. What are the results of these expressions? (answer first, then use console.log() to check)
     // "" + 1 + 0
 console.log("" + 1 + 0)
     // "" - 1 + 0
@@ -41,19 +41,42 @@ console.log(" \t \n" - 2)
     // let thirty = "30"
     // //what is the value of the following expressions?
     // let addition = three + four
+
+// CC - this will return 34 since the numbers have not been converted to integers yet (which would give you 7 as needed)
+// parseint can be used to convert to numbers first 
+
     // let multiplication = three * four
+
+// CC - this will return the correct answer of 12 because mutliplication automatically converts to integers
+
     // let division = three / four
+
+// CC - this will return the correct answer of .75 because division automatically converts to integers
+
     // let subtraction = three - four
+
+// CC - this will return the correct answer of -1 because subtraction automatically converts to integers
+    
     // let lessThan1 = three < four
+
+// CC - this will work because it is comparing as if it's a string and three is alphabetically before 
+
     // let lessThan2 = thirty < four
+
+// CC - this WON'T work because it is comparing as if it's a string and thirty is alphabetically before four (not comparing as integers)
 
 
 // 3. Which of the following console.log messages will print? Why?
     // if (0) console.log('#1 zero is true')
+// CC - won't print becasue 0 is considered as falsey
     // if ("0") console.log('#2 zero is true')
+// CC - will print because not an empty string
     // if (null) console.log('null is true')
+// CC - won't print becasue null is considered as falsey
     // if (-1) console.log('negative is true')
+// CC - will print
     // if (1) console.log('positive is true')
+// CC - will print
 
 // 4. Rewrite this if using the ternary/conditional operator '?'. Test it with different values for a
 // and b. What does the ‘+=’ do?
@@ -65,11 +88,27 @@ console.log(" \t \n" - 2)
     // result += 'greater than 10';
     // }
 
+let a = 2, b = 3;
+
+result += a + b < 10 ? 'less than 10' : 'greater than 10';
+
+// console.log (result)
+
+// CC - the += adds 1 to the previous value
+
 // 5. Rewrite the following function using: a) function expression syntax, and b) arrow function
 // syntax. Test each version to make sure they work the same.
     // function getGreeting(name) {
     // return 'Hello ' + name + '!';
     // }
+
+const getGreeting = function(name) {
+    return 'Hello' + name;
+}
+
+const getGreetingArrow = (name) => 'Hello' + name
+
+// console.log(getGreetingArrow(Connie))
 
 // 6. a) Complete the inigo object by adding a lastName property and including it in the
 // greeting.
@@ -95,6 +134,30 @@ console.log(" \t \n" - 2)
     // return 'Nice to meet you.';
     // }
     // }
+    // inigo.greeting(westley)
+    // inigo.greeting(rugen)
+
+// CC - START ANSWER FOR #6 HERE 
+
+    // const westley = {
+    // name: 'Westley',
+    // numFingers: 5
+    // }
+    // const rugen = {
+    // name: 'Count Rugen',
+    // numFingers: 6
+    // }
+
+
+    // const inigo = {
+    // firstName: 'Inigo',
+    // lastName:'Montoya',
+    // greeting(person) {
+    // let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}. `;
+    // console.log(greeting + this.getCatchPhrase(person));
+    // },
+    // getCatchPhrase(person) += person.numFingers === 6 ? 'You killed my father. Prepare to die.':'Nice to meet you'
+
     // inigo.greeting(westley)
     // inigo.greeting(rugen)
 
@@ -125,6 +188,45 @@ console.log(" \t \n" - 2)
 // //modify each of the above object methods to enable function chaining as below:
     // basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
 
+// CC - START ANSWER FOR #7 HERE
+
+    // const basketballGame = {
+    // score: 0,
+    // freeThrow() {
+    // this.score++;
+    // },
+    // basket() {
+    // this.score += 2;
+    // },
+    // threePointer() {
+    // this.score += 3;
+    // },
+    // halfTime() {
+    // console.log('Halftime score is '+this.score);
+    // }
+    // }
+    // setFoul {
+
+    // }
+    // halfTime() {
+    //     console.log(
+    //         "Half time score is" + this.score + " (" + this.foul + " fouls)."
+    //     )
+    // }
+    // fullTime() {
+    //     console.log(
+    //         "Final score is" + this.score + " (" + this.foul + " fouls)."
+    //     )
+    // }
+
+    // basketballGame
+    //     .basket()
+    //     .freeThrow()
+    //     .freeThrow()
+    //     .basket()
+    //     .threePointer()
+    //     .halfTime();
+
 // 8. The object below represents a single city.
 // a) Write a function that takes an object as an argument and uses a for...in loop to access
 // and print to the console each of those object properties and their values. Test it using
@@ -139,6 +241,32 @@ console.log(" \t \n" - 2)
     // timezone: 'Australia/Sydney'
     // }
 
+const sydney = {
+    name: 'Sydney',
+    population: 5_121_000,
+    state: 'NSW',
+    founded: '26 January 1788',
+    timezone: 'Australia/Sydney'
+}
+
+function CityDetails(cityObj) {
+    for (let CityDetails in cityObj) {
+        console.log (CityDetails + " = " + cityObj[CityDetails]);
+    }
+}
+
+const perth = {
+    name: 'Perth',
+    population: 2_143_490,
+    state: 'WA',
+    founded: '12 August 1829',
+    timezone: 'Australia/Perth'  
+}
+
+CityDetails(sydney);
+CityDetails(perth);
+
+
 // 9. Use the following variables to understand how JavaScript stores objects by reference.
 // a) Create a new moreSports variable equal to teamSports and add some new sport
 // values to it (using push and unshift)
@@ -151,6 +279,36 @@ console.log(" \t \n" - 2)
     // let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
     // let dog1 = 'Bingo';
     // let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+
+// a)
+    let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+
+    let moreSports = teamSports;
+    moreSports.push("Baseball");
+    moreSports.unshift("Rugby");
+
+// b)
+    let dog1 = 'Bingo';
+    let dog2 = dog1;
+    dog2 = "Bluey"; 
+
+// c)
+    let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+    let cat2 = cat1
+    cat2.name = "Whiskers"
+
+// d)
+    console.log(teamSports);
+    console.log(dog1);
+    console.log(cat1);
+
+// e)
+    let extraSports = [...teamSports];
+    extraSports.push("Baseball");
+    extraSports.unshift("Rugby");
+
+    console.log(moreSports);
+
 
 // 10. The following constructor function creates a new Person object with the given name and
 // age values.
@@ -166,3 +324,43 @@ console.log(" \t \n" - 2)
     // this.name = name;
     // this.age = age;
     // this.human
+
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.human
+    }
+
+    const person1 = new Person ("Connie", 31)
+    const person2 = new Person ("Jake" , 24)
+
+
+    function PersonDetails(personObj) {
+        for (let PersonDetails in personObj) {
+            console.log (PersonDetails + " = " + personObj[PersonDetails]);
+        }
+    }
+
+    PersonDetails(person1)
+    PersonDetails(person2)
+
+    class PersonClass {
+        constructor (name, age) {
+            this.name = name;
+            this.age = age;
+            this.human = true;
+        }
+
+        canDrive() {
+            return this.age >= 16
+        }
+    }
+
+    // need to add function CanDrive() here
+
+    // need to add person3 here
+
+    if (person1.canDrive())
+        console.log(
+            person1.age
+    )
