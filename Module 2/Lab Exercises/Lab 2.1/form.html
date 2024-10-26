@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab 2.1 Form</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="/">Home</a>
+      <a href=index.html>Index</a>
+      <a href=index.html>Form</a>
+    </nav>
+  </header>
+
+  <form method="POST" action="http://127.0.0.1:5500/form.html">
+  
+  <div>
+    <label for="first_name">First Name</label>
+    <input type="text" value="first name" id="first_name"><br>
+    <label for="last_name">Last Name</label>
+    <input type="text" value="last name" id="last_name"><br>
+</div>
+
+<div>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label><br><br>
+</div>  
+
+<div>
+    <input type="checkbox" value="Ute_Checkbox">
+    <label for="Ute_Checkbox">Check if You Own a Ute</label><br>
+    <input type="checkbox" id="Motorcyle_Checkbox">
+    <label for="Motorcyle_Checkbox">Check if You Own a Motorcyle</label><br>
+    <input type="checkbox" id="Car_Checkbox">
+    <label for="Car_Checkbox">Check if You Own a Car</label><br>
+</div>
+
+<br>
+
+<div>
+    <label for="cars">Choose a car brand:</label>
+
+    <select name="cars" id="cars">
+        <option value="toyota">Toyota</option>
+        <option value="chevy">Chevy</option>
+        <option value="ford">Ford</option>
+    </select>
+</div>
+
+<br>
+
+<div>
+    <button type="submit">Submit form</button>
+</div>
+
+</form>
+
+
+  <main>
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>

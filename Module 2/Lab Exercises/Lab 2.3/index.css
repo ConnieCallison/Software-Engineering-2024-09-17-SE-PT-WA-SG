@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+.background-1 {
+    background: #68B0AB;
+}
+
+.background-2 {
+    background: #8FC0A9;
+}
+
+.background-3 {
+    background: #C8D5B9;
+}
+
+.background-4 {
+    background: #FAF3DD;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.h-80 {
+    height: 80px;
+}
+
+.h-400 {
+    height: 400px;
+}
+
+.w-80 {
+    width: 80px;
+}
+
+/* Add your answers here, do not modify the above CSS */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* change the direction, orientation, etc. of the flex container items by changing "flex-direction" property above. */
+
+.flex-item-1 {
+    flex: 1
+}
+
+.flex-item-2 {
+    flex: 2
+}
+
+.flex-item-3 {
+    flex: 3
+}
+
+.flex-item-4 {
+    flex: 4
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between
+}
+
+.flex-basis-item-50 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;  
+}
+
+.flex-menu {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-menu>*first-item{
+    flex: 1;
+    justify-content: center;
+}
+
+.flex-menu>*second-item{
+    flex: 1;
+    justify-content: center;
+}
+
+.flex-menu>*third-item{
+    flex: 1;
+    justify-content: center;
+}
+
+.flex-menu>*fourth-item{
+    flex: 1;
+    order: 5;   
+    justify-content: center; 
+}
+
+.flex-menu>*fifth-item{
+    flex: 1;
+    justify-content: center;
+}
+
+/* .flex-menu[class="background-3 first-item"] {
+    justify-content: center;
+}
+
+.flex-menu[class="background-3 second-item"] {
+    justify-content: center;
+} */

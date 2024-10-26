@@ -1,0 +1,10 @@
+{
+    "name": "Connie",
+    "country": "AU",
+    "age": "31",
+    "address": {
+        "address1": "47A St Leonards Ave",
+        "address2": "West Leederville",
+        "zipCode": "6007"
+    }
+}

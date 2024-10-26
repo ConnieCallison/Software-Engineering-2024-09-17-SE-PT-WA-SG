@@ -1,0 +1,162 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+    }
+
+.style-me1 {
+color: red
+}
+
+#style-me2 {
+color: blue
+}
+
+.style-me1#style-me2 {
+    color: purple
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+
+div p[class="my-descendants-are-styled"] {
+    background-color: red;
+  }
+
+div > p[class="my-children-are-styled"] {
+    background-color: lightgreen;
+  }
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+
+
+.box{
+
+    background-color: pink;
+    margin: 100px;
+    border: 5px, solid;
+    padding: 50px;
+
+    width: 25vh !important;
+    height: 25vh !important;
+
+    overflow: auto;
+    overflow: scroll;
+
+    outline: 100px;
+
+    border-radius: 50%;
+
+    background-image: url(img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+* {box-sizing: border-box;}
+
+
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+
+.position-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: lightcoral;
+}
+
+.position-relative {
+    position: relative;
+    left: 2;
+    background-color: lightgoldenrodyellow;
+}
+
+.position-sticky {
+    position: sticky;
+    top: 27px;
+    background-color: hotpink;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+.text-style {
+    color: peru;
+    font-size: 14;
+    line-height: 4;
+    font-weight: 400;
+    font-family:"Qwitcher Grypen", cursive;
+    font-style: normal;
+    text-align: justify;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+/* unvisited link */
+a:link {
+    color: red;
+    font-size: normal;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  
+  /* clicked link (not visited yet) */
+  a:focus{
+    color: green;
+    font-size: larger;
+    text-decoration: underline;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+    font-size: smaller;
+    text-decoration: dashed;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+    font-size: xx-large;
+    text-decoration: overline;
+  }
+
+    /* visited link */
+    a:visited{
+        color: turquoise;
+        font-size: xx-small;
+        text-decoration: line-through;
+      }
+
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+
+.calc-style {
+    width: 100vw;
+    background-color: mistyrose;
+    width: calc(100vw - 100px);
+}
+
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+}
+
+
+.fluid-col {
+    display: inline-block;
+    width: 100% - 350px;
+}

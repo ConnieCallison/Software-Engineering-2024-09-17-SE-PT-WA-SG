@@ -1,0 +1,16 @@
+{
+  "name": "first-repo",
+  "version": "1.0.0",
+  "description": "First repo to create online",
+  "main": "index.js",
+  "scripts": {
+    "runFile": "node index.js && node index.js && node index.js && node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "Express": "^3.0.1",
+    "sentiment": "^5.0.2"
+  }
+}

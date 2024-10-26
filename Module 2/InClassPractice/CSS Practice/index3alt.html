@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text with Lines</title>
+  <style>
+    .line-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: black;
+      margin: 0 10px; /* Adjust the spacing as needed */
+    }
+
+    .text {
+      font-weight: bold;
+      font-size: 20px; /* Adjust the font size as needed */
+      white-space: nowrap; /* Prevent the text from wrapping */
+    }
+
+    html {
+    font-family: Lato, sans-serif;
+    background: linear-gradient(to bottom right, #c4a3ff, #96c2ff);
+    height: 100%;
+}
+  </style>
+</head>
+<body>
+  <div class="line-container">
+    <span class="line"></span>
+    <span class="text">Element</span>
+    <span class="line"></span>
+  </div>
+</body>
+</html>

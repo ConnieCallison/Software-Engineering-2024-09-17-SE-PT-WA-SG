@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Module 1 Exercise 3</title>
+
+    <link rel="Exercise3" href="Exercise3.css">
+
+    <!-- <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        min-height: 100vh;
+        align-items: stretch;
+      }
+      .column {
+        background: goldenrod;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+      button {
+        background: palevioletred;
+        font-family: Arial;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="column" id="column1">
+        <h1 id="heading1">Hello</h1>
+        <input id="Column1Text" Change Column Title/>
+        <button onclick=ChangeColumn1Colour()>Change Background Color</button>
+        <img src=https://t4.ftcdn.net/jpg/05/76/45/39/240_F_576453908_otzlYriG3ENfNgULqjkeSBFqwZY0SPQl.jpg>
+      </div>
+      <div class="column" id="column2">
+        <h1 id="heading2">World</h1>
+        <button onclick=ChangeColumn2Colour()>Change Background Color</button>
+        <img src=https://media.istockphoto.com/id/1326007751/photo/koala-on-eucalyptus-tree-outdoor-in-australia.jpg?s=612x612&w=0&k=20&c=WjNO0xVHvqiO3LfM-eMfOregYx6_2NMTbpCw1M8hUdY=>
+      </div>
+    </div>
+
+    <script>
+        function ChangeColumn1Colour(){
+            document.getElementById("column1").style.backgroundColor="red";
+        }
+
+        function ChangeColumn2Colour(){
+            document.getElementById("column2").style.backgroundColor="blue";
+        }
+    </script>
+
+  </body>
+</html>
