@@ -83,3 +83,19 @@ form button:hover {
     background-color: lightpink;
     border-radius: 4px;
 }
+
+.filter-by-type {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-by-type  label {
+    margin-right: 10px;
+}
+
+.filter-by-type select {
+    padding: 10px;
+    border: 1px solid white;
+    background-color: lightpink;
+    border-radius: 4px;
+}

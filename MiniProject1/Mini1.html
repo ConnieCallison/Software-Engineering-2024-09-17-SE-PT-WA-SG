@@ -27,7 +27,7 @@
                 <option value="Salary">Salary</option>
             </select>
             <input type="number" id="transaction-amount" placeholder="Amount" required />
-            <select id="currency" required>
+            <select id="transaction-currency" required>
                 <option value="" disabled selected>Select Currency</option>
                 <option value="USD">$ USD</option>
                 <option value="AUD">$ AUD</option>
@@ -64,6 +64,14 @@
                 <option value="Rent">Rent</option>
                 <option value="Entertainment">Entertainment</option>
                 <option value="Salary">Salary</option>
+            </select>
+        </div>
+        <div class="filter-by-type">
+            <label for="filter-type">Filter by Type:</label>
+            <select id="filter-type">
+                <option value="All">All</option>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
             </select>
         </div>
     </div>

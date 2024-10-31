@@ -1,4 +1,4 @@
-document.addTransaction("DOMContentLoaded", () => { 
+document.addEventListener("DOMContentLoaded", () => {
     const transactionForm = document.getElementById("transaction-form");
     const transactionList = document.getElementById("transaction-list");
     const totalAmount = document.getElementById("total-amount");
@@ -6,7 +6,7 @@ document.addTransaction("DOMContentLoaded", () => {
 
     let transactions = [];
 
-    transactionForm.addTransaction("submit", (e) => {
+    transactionForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const name = document.getElementById("transaction-name").value;
@@ -14,7 +14,7 @@ document.addTransaction("DOMContentLoaded", () => {
         const type = document.getElementById("transaction-type").value;
         const category = document.getElementById("transaction-category").value;
         const amount = parseFloat(document.getElementById("transaction-amount").value);
-        const currency = parseFloat(document.getElementById("currency").value);
+        const currency = document.getElementById("transaction-currency").value;
 
         const transaction = {
             id: Date.now(),
@@ -23,7 +23,7 @@ document.addTransaction("DOMContentLoaded", () => {
             type,
             category,
             amount,
-            currency,
+            currency
         };
 
         transactions.push(transaction);
@@ -33,7 +33,7 @@ document.addTransaction("DOMContentLoaded", () => {
         transactionForm.reset();
     });
 
-    transactionList.addTransaction("click", (e) => {
+    transactionList.addEventListener("click", (e) => {
         if (e.target.classList.contains("delete-btn")) {
             const id = parseInt(e.target.dataset.id);
             transactions = transactions.filter(transaction => transaction.id !== id);
@@ -50,7 +50,7 @@ document.addTransaction("DOMContentLoaded", () => {
             document.getElementById("transaction-type").value = transaction.type;
             document.getElementById("transaction-category").value = transaction.category;
             document.getElementById("transaction-amount").value = transaction.amount;
-            document.getElementById("currency").value = transaction.currency;
+            document.getElementById("transaction-currency").value = transaction.currency;
 
             transactions = transactions.filter(transaction => transaction.id !== id);
             displayTransactions(transactions);
@@ -58,13 +58,23 @@ document.addTransaction("DOMContentLoaded", () => {
         }
     });
 
-    filterCategory.addTransaction("change", (e) => {
+    filterCategory.addEventListener("change", (e) => {
         const category = e.target.value;
         if (category === "All") {
             displayTransactions(transactions);
         } else {
             const filteredTransactions = transactions.filter(transaction => transaction.category === category);
             displayTransactions(filteredTransactions);
+        }
+    });
+
+    filterCategory.addEventListener("change", (e) => {
+        const type = e.target.value;
+        if (type === "All") {
+            displayTransactions(transactions);
+        } else {
+            const filteredTransactionsbytype = transactions.filter(transaction => transaction.type === type);
+            displayTransactions(filteredTransactionsbytype);
         }
     });
 
@@ -76,7 +86,6 @@ document.addTransaction("DOMContentLoaded", () => {
             row.innerHTML = `
                 <td>${transaction.name}</td>
                 <td>${transaction.date}</td>
-                <td>${transaction.type}</td>
                 <td>${transaction.category}</td>
                 <td>$${transaction.amount.toFixed(2)}</td>
                 <td>${transaction.currency}</td>
@@ -89,9 +98,4 @@ document.addTransaction("DOMContentLoaded", () => {
             transactionList.appendChild(row);
         });
     }
-
-    function updateTotalAmount() {
-        const total = transactions.reduce((sum, transaction) => sum + transaction.amount, 0);
-        totalAmount.textContent = total.toFixed(2);
-    }
-});
+})
