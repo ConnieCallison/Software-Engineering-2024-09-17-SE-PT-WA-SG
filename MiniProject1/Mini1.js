@@ -68,16 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    filterCategory.addEventListener("change", (e) => {
-        const type = e.target.value;
-        if (type === "All") {
-            displayTransactions(transactions);
-        } else {
-            const filteredTransactionsbytype = transactions.filter(transaction => transaction.type === type);
-            displayTransactions(filteredTransactionsbytype);
-        }
-    });
-
     function displayTransactions(transactions) {
         transactionList.innerHTML = "";
         transactions.forEach(transaction => {
@@ -86,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
             row.innerHTML = `
                 <td>${transaction.name}</td>
                 <td>${transaction.date}</td>
+                <td>${transaction.type}</td>
                 <td>${transaction.category}</td>
                 <td>$${transaction.amount.toFixed(2)}</td>
                 <td>${transaction.currency}</td>
