@@ -1,3 +1,5 @@
+document.getElementById("transaction-date").valueAsDate = new Date()
+
 document.addEventListener("DOMContentLoaded", () => {
     const transactionForm = document.getElementById("transaction-form");
     const transactionList = document.getElementById("transaction-list");
