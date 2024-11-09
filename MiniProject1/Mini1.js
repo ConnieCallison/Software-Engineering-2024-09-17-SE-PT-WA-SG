@@ -92,3 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 })
+
+
+sessionStorage
+
+sessionStorage.setItem(getElementById("transaction-name"), "value");
+sessionStorage.setItem(getElementById("transaction-date"), "value");
+sessionStorage.setItem(getElementById("transaction-type"), "value");
+sessionStorage.setItem(getElementById("transaction-category"), "value");
+sessionStorage.setItem(getElementById("transaction-amount"), "value");
+sessionStorage.setItem(getElementById("transaction-currency"), "value");
