@@ -1,0 +1,27 @@
+// const UserContext = React.createContext();
+
+// export const UserProvider = (props) => {
+//     const [currentUser, setCurrentUser] = useState({});
+
+//     const handleUpdateUser = (user) => {
+//         setCurrentUser(user);
+//     }
+// }
+
+// return (
+// <UserContext.Provider value = {{currentUser, handleUpdateUser}}>
+//     {props.children}
+// </UserContext.Provider>
+// );
+
+// // use this hook to access the context above from any child component:
+
+// export const useUserContext = () => {
+//     return useContext(UserContext);
+// } 
+
+// Save as UserContext.jsx in a separate 'context' folder
+
+
+// A different context folder can be create for different types of data. The example above is for 
+// user data but you could also create a context folder for theme as well, for example.

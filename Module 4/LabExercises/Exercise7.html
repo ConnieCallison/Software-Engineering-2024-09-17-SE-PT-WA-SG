@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,
+initial-scale=1"
+        />
+        <style>
+            .square {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                left: 50%;
+                border-radius: 0%;
+                position: absolute;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-name: moveDownAndColor;
+            }
+
+            @keyframes moveDownAndColor {
+                from {
+                    top: 0;
+                    background-color: red;
+                }
+                50% {
+                    top: 50%;
+                    background-color: blue;
+                }
+                to {
+                    top: 100%;
+                    background-color: red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="square"></div>
+    </body>
+</html>
